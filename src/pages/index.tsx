@@ -56,7 +56,7 @@ const Home: NextPage = () => {
 			const [removed] = items.splice(source.index, 1);
 			const parsedRemoved = Vegetable.parse(removed);
 			if (parsedRemoved !== undefined) {
-				items.splice(destination.index, 0, removed);
+				items.splice(destination.index, 0, parsedRemoved);
 			}
 			setDraggableVeggies(items);
 		}
